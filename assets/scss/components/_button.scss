@@ -1,0 +1,57 @@
+//文字コードはutf-8
+@charset "UTF-8";
+
+@use "../global" as g;
+
+/* Button
+========================================================*/
+#{g.$prefix_mod} {
+  &Btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    margin: 28px 40px 21px 50px;
+    width: 220px;
+    height: 50px;
+    background-color: var(--orange);
+    transition: background-color 0.3s ease;
+
+    &--bgBlue{
+      background-color: var(--blue);
+
+      &:hover{
+        background-color: #3685fa !important;
+      }
+    }
+
+    &:hover {
+      background-color: var(--orange-hover);
+    }
+
+    &__text {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      margin: 0 0 0 10px;
+      font-weight: 700;
+
+      &--cart{
+        display: flex;
+        align-items: center;
+        color: #fff;
+        margin: 0 0 0 10px;
+        
+        &::before {
+          content: " ";
+          background-image: url("/assets/img/header/buynow_icon.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 25px;
+          height: 20px;
+          margin: 0 5px 0 0;
+        }
+      }
+    }
+  }
+}

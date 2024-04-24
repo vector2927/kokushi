@@ -1,0 +1,38 @@
+//文字コードはutf-8
+@charset "UTF-8";
+
+// 使用変数
+//===================================================================
+
+// ブレークポイント
+$bp_pc_min: 768px;
+$bp_tablet_max: 1300px;
+$bp_tablet_min: 769px;
+$bp_smartphone_max: 768px;
+
+// font
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap');
+$fontface_default: 'Zen Kaku Gothic New', 'Noto Sans JP', 'sans-serif';
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+$fontface_jost: 'Jost', 'Zen Kaku Gothic New', 'Noto Sans JP', 'sans-serif';
+
+// テキストカラー
+$base_text_color: var(--black);
+
+//コンテンツ幅
+$base_content_width: 1440;
+
+//class名の接頭辞
+$prefix_mod: ".mod";
+
+//カラー
+:root{
+  --black: #1d201f;
+  --orange: #ff9600;
+  --orange-hover: #ffae00;
+  --light: #edf4ff;
+  --blue: #0f6efa;
+  --white: #fff;
+  --lightBorder:#c9dffe;
+}

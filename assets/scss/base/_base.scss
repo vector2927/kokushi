@@ -1,0 +1,32 @@
+//文字コードはutf-8
+@charset "UTF-8";
+
+@use "../global" as g;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: auto;
+  background-color: transparent;
+}
+
+body {
+  font-family: g.$fontface_default;
+  color: var(--black);
+  @include g.fontsize(14);
+  overflow-x: hidden;
+  @include g.media_queries {
+    @include g.fontsize(12);
+  }
+}
+
+a {
+  @include g.media_queries(pc) {
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--black);
+  }
+}

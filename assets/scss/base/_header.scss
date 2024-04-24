@@ -1,0 +1,103 @@
+@use "../global" as g;
+
+
+.header {
+  background-color: #00000000;
+  position: absolute;
+  top: 0;
+  height: auto;
+  width: 100vw;
+  margin: 0 auto;
+  z-index: 999;
+
+  &__list {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include g.media_queries {}
+
+    &__logo {
+      width: 17%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+
+      @include g.media_queries {
+        width: 50%;
+      }
+
+      .logo {
+        margin: 22px 28px 25px 30px;
+        width: 56%;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+
+      @include g.media_queries {}
+    }
+
+    &__buynow {
+      width: auto;
+      justify-content: end;
+
+      @include g.media_queries {
+        width: 50%;
+        justify-content: start;
+      }
+
+      .buynowBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        margin: 28px 40px 21px 50px;
+        width: 220px;
+        height: 50px;
+        background-color: var(--orange);
+        transition: background-color 0.3s ease;
+        font-weight: 700;
+
+        @include g.media_queries {
+          width: 170px;
+          height: 33px;
+          margin: 28px 0px 21px 0px;
+          font-size: 12px;
+        }
+
+        &:hover {
+          background-color: var(--orange-hover);
+        }
+
+        &__text {
+          display: flex;
+          align-items: center;
+          color: #fff;
+          margin: 0 0 0 10px;
+
+          &::before {
+            content: " ";
+            background-image: url("/assets/img/header/buynow_icon.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 25px;
+            height: 20px;
+            margin: 0 5px 0 0;
+
+            @include g.media_queries {
+              width: 20px;
+              height: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
