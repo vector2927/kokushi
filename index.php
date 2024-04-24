@@ -22,7 +22,7 @@
 
   <!--// Header
 ------------------------------------------------------------>
-  <?php include ($_SERVER['DOCUMENT_ROOT'] . "/assets/include/_header.php"); ?>
+  <?php include ($_SERVER['DOCUMENT_ROOT']."/assets/include/_header.php"); ?>
   <!---------------------------------------------------------
  Header //-->
 
